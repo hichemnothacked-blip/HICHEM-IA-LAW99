@@ -59,7 +59,7 @@ app.post('/ask', async (req, res) => {
       return res.status(400).json({ error: 'A question is required.' });
     }
 
-    const model = 'llama3-8b-8192'; // Groq model name
+    const model = 'llama-3.1-8b-instant'; // Use the latest fast Llama 3.1 model from Groq
     const messages = [
       { role: 'system', content: 'You are a helpful legal assistant. Provide clear, concise, and accurate information. Your answers should be in the same language as the user\'s question (English, French, or Arabic).' },
       { role: 'user', content: question },
